@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+{% seo %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="https://privacypass.github.io">          
+          <div style="position:relative;width:300px;height:50px">
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+            <img src="{{ site.github.url }}/assets/pp.png" alt="Privacy Pass logo" style="position:absolute;top:0;left:185px;bottom:20px;margin:auto;width:50px;height:50px;">
+          </div>
+        </a>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        <p>A privacy-enhancing protocol and browser extension.</p>
+        <br>
+        <div>
+          <ul>
+            <li style="position:relative;top:10px;left:20px;border-right:0px solid #e0e0e0"><strong>Install:</strong></li>
+            <li style="border-left:1px solid #e0e0e0"><a href="https://chrome.google.com/webstore/detail/privacy-pass/ajhmfdgkijocedmfjonnpjfojldioehi"><img src="{{ site.github.url }}/assets/chrome.png" alt="Chrome" style="width:30px;height:30px;"></a></li>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-pass/"><img src="{{ site.github.url }}/assets/firefox.png" alt="Firefox" style="width:30px;height:30px;"></a></li>
+          </ul>
+        </div>
+        <br>
+        <div class="ignore-css">
+          <p>&bull; <a href="https://privacypass.github.io">Home</a></p>
+          <p>&bull; <a href="https://privacypass.github.io/protocol">Protocol design</a></p>
+          <p>&bull; <a href="https://privacypass.github.io/faq">FAQ</a></p>
+          <p>&bull; <a href="https://privacypass.github.io/team">Team</a></p>
+          <p>&bull; <a href="https://github.com/privacypass/challenge-bypass-extension">Extension code</a></p>
+          <p>&bull; <a href="https://github.com/privacypass/challenge-bypass-server">Server code</a></p>
+        </div>
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+
+
+  {% if site.google_analytics %}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+  {% endif %}
+  </body>
+</html>
