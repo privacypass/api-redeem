@@ -2,7 +2,7 @@
 
 ### Description
 
-Once a user is in possesion of tokens issued by the PrivacyPass server, any bearer of a token can redeem it through the redemption server. This document describes how to use a JSON-RPC endpoint for this purpose.
+Once a user is in possession of tokens issued by the Privacy Pass server, any bearer of a token can redeem it through the redemption server. This document describes how to use a JSON-RPC endpoint for this purpose.
 
 When a user submits a token for redemption, the server will verify whether the token and its associated data (bindings) are cryptographically valid. If so, the server will mark this token as spent and will return a sucessful response. Otherwise, the server wll return a response indicating the possible cause of the error.
 
@@ -26,7 +26,7 @@ The endpoint supports one method called `redeem` that receives as input paramete
         "method": "swu"
     }
     ```
--   "bindings" : (required) an array of two associated strings, denoted by `R` in the PrivacyPass protocol.
+-   "bindings" : (required) an array of associated strings, denoted by `R` in the PrivacyPass protocol.
 -   "compressed" : (optional) a boolean value indicating whether the elliptic curve points are compressed. Default is `false`.
 
 #### Example
@@ -64,7 +64,7 @@ This `curl` transfer shows how to use the redemption API with the previous reque
         --data @request.json
 ```
 
-A sucessful redemption is completed with a HTTP 200 status and a JSON response:
+A successful redemption is completed with a HTTP 200 status and a JSON response:
 
 ```json
 {
