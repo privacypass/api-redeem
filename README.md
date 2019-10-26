@@ -23,7 +23,7 @@ The endpoint supports one method called `redeem` that receives as input paramete
     {
         "curve": "p256",
         "hash": "sha256",
-        "method": "swu"
+        "method": "increment"
     }
     ```
 -   "bindings" : (required) an array of associated strings, denoted by `R` in the PrivacyPass protocol.
