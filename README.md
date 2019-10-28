@@ -2,7 +2,7 @@
 
 ### Description
 
-Once a user is in possession of tokens issued by the Privacy Pass server, any bearer of a token can redeem it through the redemption server. This document describes how to use a JSON-RPC endpoint for this purpose.
+Once a user is in possession of tokens issued by the new Privacy Pass redemption server, any bearer of a token can redeem it through the provided redemption API. This document describes how to use a JSON-RPC endpoint for this purpose.
 
 When a user submits a token for redemption, the server will verify whether the token and its associated data (bindings) are cryptographically valid. If so, the server will mark this token as spent and will return a sucessful response. Otherwise, the server wll return a response indicating the possible cause of the error.
 
